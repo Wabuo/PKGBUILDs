@@ -1,0 +1,4 @@
+#!/bin/sh
+# Block commits where any staged package has a stale or missing .SRCINFO.
+
+git diff --cached --name-only --diff-filter=ACMR | "$(dirname "$0")/check-srcinfo"

@@ -1,0 +1,8 @@
+PRIVATE/
+.gitconfig-aur
+*.pkg.tar.zst
+*.pkg.tar.zst.sig
+*.src.tar.gz
+src/
+pkg/
+bar-lobby-git/bar-lobby/

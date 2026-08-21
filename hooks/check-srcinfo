@@ -1,0 +1,31 @@
+#!/bin/sh
+# Check that .SRCINFO files are up to date with their PKGBUILDs.
+# Reads changed file paths (one per line) on stdin.
+# Exits non-zero if any package's .SRCINFO is missing or stale.
+
+status=0
+seen=" "
+
+while IFS= read -r f; do
+    dir=$(dirname "$f")
+    case "$seen" in *" $dir "*) continue ;; esac
+    seen="$seen$dir "
+
+    [ -f "$dir/PKGBUILD" ] || continue
+
+    if [ ! -f "$dir/.SRCINFO" ]; then
+        echo "ERROR: $dir/.SRCINFO is missing." >&2
+        echo "       Fix with: (cd '$dir' && makepkg --printsrcinfo > .SRCINFO) && git add '$dir/.SRCINFO'" >&2
+        status=1
+        continue
+    fi
+
+    expected=$(cd "$dir" && makepkg --printsrcinfo 2>/dev/null)
+    if [ "$expected" != "$(cat "$dir/.SRCINFO")" ]; then
+        echo "ERROR: $dir/.SRCINFO is out of date with $dir/PKGBUILD." >&2
+        echo "       Fix with: (cd '$dir' && makepkg --printsrcinfo > .SRCINFO) && git add '$dir/.SRCINFO'" >&2
+        status=1
+    fi
+done
+
+exit $status
