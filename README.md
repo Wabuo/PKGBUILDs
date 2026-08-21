@@ -41,7 +41,7 @@ This repository ships its git hooks — they keep `.SRCINFO` files in sync with
 the PKGBUILDs and block commits/pushes that would carry stale metadata.
 After cloning, enable them once:
 
-    git config core.hooksPath hooks
+    git config core.hooksPath .githooks
 
 ### Publishing to the AUR
 
