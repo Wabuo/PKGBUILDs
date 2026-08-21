@@ -1,6 +1,6 @@
 # pkgbuilds
 
-My PKGBUILDs for Arch Linux / the AUR.
+My PKGBUILDs for Arch Buble and for AUR packages maintained by me.
 
 ## Packages
 
@@ -32,8 +32,6 @@ This repository is the source of truth; the AUR repos are published from it.
 - **Pull requests:** very welcome! Once merged into `main`, publishing works
   exactly as above.
 - All commits in this repository are SSH-signed.
-
-### Git hooks
 
 ### Git hooks
 
