@@ -1,7 +1,7 @@
 # pkgbuilds
 
-My PKGBUILDs for Arch Buble and for AUR packages maintained by me.
-
+My PKGBUILDs for the Arch Buble and for AUR packages maintained by me.
+PR's welcome ☺.
 ## Packages
 
 | Package | AUR |
@@ -20,7 +20,12 @@ Package directories may contain their own `LICENSE` / `REUSE.toml` files, and
 the upstream software built by each PKGBUILD remains under its own license —
 those take precedence where they differ.
 
-## Workflow
+
+<br><br><br><br>
+
+_____
+
+#### Workflow
 
 This repository is the source of truth; the AUR repos are published from it.
 
@@ -33,7 +38,7 @@ This repository is the source of truth; the AUR repos are published from it.
   exactly as above.
 - All commits in this repository are SSH-signed.
 
-### Git hooks
+##### Git hooks
 
 This repository ships its git hooks — they keep `.SRCINFO` files in sync with
 the PKGBUILDs and block commits/pushes that would carry stale metadata.
@@ -41,7 +46,7 @@ After cloning, enable them once:
 
     git config core.hooksPath .githooks
 
-### Publishing to the AUR
+##### Publishing to the AUR
 
 `scripts/publish.sh` subtree-pushes each package directory to its AUR repo.
 The very first run after migrating from standalone AUR clones needs a one-time
