@@ -1,7 +1,8 @@
 # PKGBUILDs
 
-My PKGBUILDs for the Arch Buble and for AUR packages maintained by me.
+My PKGBUILDs for the Arch Buble and for AUR packages maintained by me. <br>
 PR's welcome ☺.
+
 ## Packages
 
 | Package | AUR |
