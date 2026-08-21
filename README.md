@@ -20,11 +20,20 @@ Package directories may contain their own `LICENSE` / `REUSE.toml` files, and
 the upstream software built by each PKGBUILD remains under its own license —
 those take precedence where they differ.
 
-## Contributing
+## Workflow
 
-Found a bug? Feel free to open an issue or send a pull request.
+This repository is the source of truth; the AUR repos are published from it.
 
-All commits in this repository are SSH-signed.
+- **Releasing changes:** edit / commit here, `git push` to GitHub, then run:
+
+      ./publish.sh
+
+  Unchanged packages are skipped automatically.
+- **Pull requests:** very welcome! Once merged into `main`, publishing works
+  exactly as above.
+- All commits in this repository are SSH-signed.
+
+### Git hooks
 
 ### Git hooks
 
@@ -33,3 +42,13 @@ the PKGBUILDs and block commits/pushes that would carry stale metadata.
 After cloning, enable them once:
 
     git config core.hooksPath hooks
+
+### Publishing to the AUR
+
+`scripts/publish.sh` subtree-pushes each package directory to its AUR repo.
+The very first run after migrating from standalone AUR clones needs a one-time
+history resync:
+
+    AUR_OVERWRITE=1 ./publish.sh
+
+Afterwards, `./publish.sh` must remain the only writer of the AUR repos.
