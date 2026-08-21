@@ -1,4 +1,4 @@
-# pkgbuilds
+# PKGBUILDs
 
 My PKGBUILDs for the Arch Buble and for AUR packages maintained by me.
 PR's welcome ☺.
