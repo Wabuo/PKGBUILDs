@@ -5,4 +5,7 @@ PRIVATE/
 *.src.tar.gz
 src/
 pkg/
+*.log
+*/recoil-engine/
+*/recoil-engine-rc/
 bar-lobby-git/bar-lobby/
