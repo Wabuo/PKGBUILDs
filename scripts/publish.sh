@@ -40,7 +40,7 @@ for pkg in $aur_pkgs; do
         force="--force"
     fi
 
-    if git push $force "ssh://aur@aur.archlinux.org/${pkg}.git" "$split:master"; then
+    if git push $force "ssh://aur@aur.archlinux.org/${pkg}.git" "$split:refs/heads/master"; then
         echo "ok"
     else
         echo "ERROR: pushing '$pkg' failed." >&2
