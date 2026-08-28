@@ -9,8 +9,8 @@ PR's welcome ☺.
 | --- | --- |
 | [bar-lobby-git](bar-lobby-git/) | <https://aur.archlinux.org/packages/bar-lobby-git> |
 | [betterleaks](betterleaks/) | <https://aur.archlinux.org/packages/betterleaks> |
-| [recoil-engine-rc](recoil-engine-rc/) | <https://aur.archlinux.org/packages/recoil-engine-rc> |
 | [recoil-engine](recoil-engine/) | <https://aur.archlinux.org/packages/recoil-engine> |
+| [recoil-engine-rc](recoil-engine-rc/) | <https://aur.archlinux.org/packages/recoil-engine-rc> |
 
 ## License
 
